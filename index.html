@@ -5,7 +5,10 @@
     <script type="text/javascript">
         function redirectToApp() {
             console.log("NEW VERSION!!!");
-            const urlParams = new URLSearchParams(window.location.search);
+            // Get the URL parameters
+            const urlParams = new URLSearchParams(window.location.hash.substring(1));
+            
+            // Extract the access_token from URL
             const accessToken = urlParams.get('access_token');
             console.log("here is the access token: " + accessToken);
             console.log("here is the url I want you to go to: exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass")
