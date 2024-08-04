@@ -4,14 +4,14 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
         function redirectToApp() {
+            console.log("NEW VERSION!!!");
+            const urlParams = new URLSearchParams(window.location.search);
+            const accessToken = urlParams.get('access_token');
+            console.log("here is the access token: " + accessToken);
             console.log("here is the url I want you to go to: exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass")
             window.location.href = "exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass";
-            
-            // setTimeout(function() {
-            //     console.log("SHOUDL NOT GET HERE!!!");
-            //     window.location.href = "com.firmcollective.onevoiceecho";
-            // }, 000);
         }
+        
         window.onload = redirectToApp;
     </script>
 </head>
