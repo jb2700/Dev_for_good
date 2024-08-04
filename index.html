@@ -11,8 +11,11 @@
             // Extract the access_token from URL
             const accessToken = urlParams.get('access_token');
             console.log("here is the access token: " + accessToken);
-            console.log("here is the url I want you to go to: exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass")
-            window.location.href = "exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass";
+            const refreshToken = urlParams.get('refresh_token');
+            console.log("Here is the link: " + "exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass?access_token=" + accessToken + "&refresh_token=" + refreshToken);
+            console.log("here is the url I want you to go to: exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass");
+            
+            window.location.href = "exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass?access_token=" + accessToken + "&refresh_token=" + refreshToken;
         }
         
         window.onload = redirectToApp;
