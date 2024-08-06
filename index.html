@@ -13,9 +13,11 @@
             console.log("here is the access token: " + accessToken);
             const refreshToken = urlParams.get('refresh_token');
             console.log("Here is the link: " + "exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass?access_token=" + accessToken + "&refresh_token=" + refreshToken);
+            const actuL_url = urlParams.get("url");
+            console.log("Actual link I want you to go to: " + actuL_url);
             console.log("here is the url I want you to go to: exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass");
             
-            window.location.href = "exp://5xn8jsg-jtexp123-8081.exp.direct/--/reset-pass?access_token=" + accessToken + "&refresh_token=" + refreshToken;
+            window.location.href = actuL_url + "/--/reset-pass?access_token=" + accessToken + "&refresh_token=" + refreshToken;
         }
         
         window.onload = redirectToApp;
